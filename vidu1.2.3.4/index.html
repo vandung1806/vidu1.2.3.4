@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+<!--    tên nhãn-->
+    <script src="angular.min/angular.min.js">    </script>
+<!--    link đến -->
+</head>
+<body>
+    <div ng-app="costApp" ng-controller="CostController">
+<!--        ng-app là chỉ dẫn -->
+<!--        ng-controller là điều khiển luồng dữ liệu-->
+  <b>8111:</b>
+    <div> Quantity: <input type="number" win="0" ng-model="qty" required ></div>
+    <div> Cost: <input type="number" win="0" ng-model="cost" required ></div>
+    <div>
+        <b>Total:</b>
+<!--        đánh dấu -->
+        <span>
+<!--            nhóm các phần tử nội tuyến với nhau-->
+            {{total | currency: ' $ '}}
+        </span>
+        <button class="btn" ng-click="pay()">Pay</button>
+<!--        tạo nút bấm-->
+    </div>
+        <script>
+            // link đến
+            var app = angular.module("costApp", []);
+            // mô tả biến
+            app.controller('CostController', function ($scope){
+                $scope.qty = 0;
+                // chứa dữ liệu và các phương thức
+                $scope.cost = 0;
+                $scope.total - 0;
+                $scope.pay = function (){
+                    this.total = this.qty * this.cost
+                };
+            });
+        </script>
+    </div>
+</body>
+</html>

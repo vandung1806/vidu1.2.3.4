@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<!--chỉ dẫn -->
+<head>
+    <meta charset="UTF-8">
+    <title>Demo for a Simple AngularJS Application</title>
+    <!--    tên nhãn-->
+    <script arc="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <!--    link đến -->
+</head>
+<body ng-controller="myCountroller">
+<!--điều khiển nguồn dữ liệu -->
+<div>
+    <p>Heloo!</p>
+    <p>Welcome to {{course}} </p>
+</div>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myController', function ($scope){
+        $scope.course = "AngularJS"
+        // chứa dữ liệu và các phương thức
+        });
+</script>
+</body>
+</html>

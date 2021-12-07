@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo for a Simple AngularJS Application</title>
+<!--    tên nhãn-->
+    <script arc="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+<!--    link đến -->
+</head>
+<body ng-controller="myCountroller">
+<!--điều khiển nguồn dữ liệu -->
+    <div>
+        <h3>Please enter yuor name here.</h3>
+        Name: <input type="text" ng-model="name" placeholder="enter your name">
+<!--        input để người dùng có thể nhập dữ liệu-->
+<!--        ng-model liên kết dữ liệu -->
+        <p>Hello! <strong>({name})</strong></p>
+        <p>Welcome to AngularJS.</p>
+    </div>
+    <script>
+        var app = angular.module("myApp",[]);
+        // khai báo biến
+        app.controller("myCorrtroller",function ($scope){
+            $scope.name =" ";
+            // chứ dữ liệu và các phương thức
+        });
+    </script>
+</body>
+</html>
